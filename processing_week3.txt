@@ -1,0 +1,25 @@
+def draw_balloon(x, y):
+ellipse(x, y, 100, 100)
+line(x, y+50, x, y+200)
+
+draw_balloon(200, 200)
+draw_balloon(400, 200)
+#รันออกมาได้บอลลูนสองลูกที่ตำแหน่งต่ากัน
+
+x = 200
+y = 200
+draw_balloon(x, y)
+
+x = x + 200 
+draw_balloon(x, y)
+#รันออกมาได้บอลลูน2ลูกแต่ตำแหน่งต่างกัน แต่มีการอัพเดทค่า x
+
+x = 200 
+def setup():
+size(500,500)
+
+def draw():
+global x
+draw_balloon( x , 200)
+x = x + 10
+#รันออกมาได้ บอลลูนที่สร้างไปเรื่อยๆตั้งแต่ที่x=200แล้วxจะเพิ่มทีละ10
